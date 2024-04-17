@@ -1,0 +1,33 @@
+// FACE IMAGE
+// Initialisez la bibliothèque Face++ avec vos clés API
+const apiKey = 'NJ2GEiybh0a3LEugDYwFR3UnH9nUodln';
+const apiSecret = 'mkqG1o_R6BAHh5PwC7ONtMdtqoPJuBvC';
+const facepp = new FacePP(apiKey, apiSecret);
+
+// Récupérez le nom de l'auteur de votre citation (dans cet exemple, l'auteur est 'John Lennon')
+const authorName = 'John Lennon';
+
+// Fonction pour rechercher une image correspondante à l'auteur via l'API Face++
+function fetchAuthorImage(authorName) {
+  facepp.search({
+    keyword: authorName,
+    count: 1
+  }).then(result => {
+    const firstImage = result.results[0];
+    if (firstImage && firstImage.url) {
+      const authorImage = firstImage.url;
+      console.log('Image de l\'auteur:', authorImage);
+      // Utilisez cette image comme bon vous semble (par exemple, affichez-la dans votre interface utilisateur)
+    } else {
+      console.error('Aucune image trouvée pour cet auteur.');
+    }
+  }).catch(error => {
+    console.error('Erreur lors de la recherche de l\'image de l\'auteur :', error);
+  });
+}
+
+// Utilisez la fonction pour rechercher une image correspondante à l'auteur de votre citation
+fetchAuthorImage(authorName);
+
+
+    <script src="https://code.faceplusplus.com/faceppjs/sdk/latest/facepp-sdk.js"></script>

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    font-family: "Nunito", sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    background: #00000077;
+    backdrop-filter: opacity(3);
+    padding: 1em;
+    width: 30em;
+    height: max-content;
+    font-size: 2em;
+    top: 10%;
+    border-radius: 0.3em;
+    position: absolute;
+    padding-bottom: 2em;
+    outline: 2px solid #fff;
+}
+
+.quoteButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-inline: 2em;
+    margin-top: 1.3em;
+}
+
+.quoteButton button {
+    font-size: 0.6em;
+    font-weight: 600;
+    padding: 0.7em;
+    padding-inline: 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.quoteButton div button{
+    padding-inline: 0.8em;
+    border-radius: 50%;
+}
+
+.bi-quote {
+    font-size: 3em;
+}
+
+.quote {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    text-wrap: wrap;
+}
+
+#quoteText {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+#quoteAuthor {
+    border-top: 2px solid #000;
+    font-size: 0.9em;
+    margin-inline: 7em;
+    padding-top: 0.8em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.modal{
+    display: none;
+    position: absolute;
+    background: #fff;
+    padding: 1em;
+    padding-top: 0;
+    top: 71%;
+    left:31%;
+    margin: 1em;
+    outline: 1px solid silver;
+}
+
+.close{
+    cursor: pointer;
+    float: right;
+    background: #000;
+    color: #fff;
+    padding-inline: 0.5em;
+}
+
+#languageList li{
+    list-style-type: none;
+}
+#languageList li button{
+    width: 13em;
+}
+
+/* Styles pour les notifications toast */
+/* Styles spécifiques aux notifications toast avec la classe custom-toastify */
+.custom-toastify .Toastify__toast-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: 100%;
+    max-width: 400px;
+}
+
+.custom-toastify .Toastify__toast {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.custom-toastify .Toastify__toast--success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.custom-toastify .Toastify__toast--error {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.custom-toastify .Toastify__toast--info {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.custom-toastify .Toastify__toast--warning {
+    background-color: #ffc107;
+    color: #000;
+}
+
+/* BOdyBackground */
+#bgImage{
+    
+}
